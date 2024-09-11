@@ -250,7 +250,7 @@ fun void client()
 {
 
   // the device number to open
-  1 => int deviceNum;
+  0 => int deviceNum;
 
   // instantiate a HidIn object
   HidIn hi;

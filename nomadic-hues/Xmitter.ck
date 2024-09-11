@@ -34,24 +34,24 @@ public class Xmitter
       7 => NUM_IN_BACK;
 
       // front section
-      backing[0].setHost ( "lasagna.local", port );
-      backing[1].setHost ( "omelet.local", port );
-      backing[2].setHost ( "pho.local", port );
-      backing[3].setHost ( "empanada.local", port );
-      backing[4].setHost ( "meatloaf.local", port );
-      backing[5].setHost ( "meatloaf.local", port );
-      backing[6].setHost ( "meatloaf.local", port );
-      backing[7].setHost ( "meatloaf.local", port );
+      backing[0].setHost ( "IMSWEISLIAMBP-2.local", port ); // Oscar
+      backing[1].setHost ( "omelet.local", port ); // Micah
+      backing[2].setHost ( "pho.local", port ); // Ethan
+      backing[3].setHost ( "empanada.local", port ); // Ian
+      backing[4].setHost ( "meatloaf.local", port ); // Mitsi
+      backing[5].setHost ( "meatloaf.local", port ); // Megan
+      backing[6].setHost ( "meatloaf.local", port ); // Aidan
+      backing[7].setHost ( "meatloaf.local", port ); // Alex
 
 
       // back section
-      backing[8].setHost ( "quinoa.local", port );
-      backing[9].setHost ( "nachos.local", port );
-      backing[10].setHost ( "foiegras.local", port );
-      backing[11].setHost ( "udon.local", port );
-      backing[12].setHost ( "chowder.local", port );
-      backing[13].setHost ( "meatloaf.local", port );
-      backing[14].setHost ( "meatloaf.local", port );
+      backing[8].setHost ( "quinoa.local", port ); // Jackson
+      backing[9].setHost ( "nachos.local", port ); // Nate
+      backing[10].setHost ( "foiegras.local", port ); // Paul
+      backing[11].setHost ( "udon.local", port ); // Sydney
+      backing[12].setHost ( "chowder.local", port ); // Will
+      backing[13].setHost ( "meatloaf.local", port ); // Isa
+      backing[14].setHost ( "meatloaf.local", port ); // Artemis
 
 
       // SETUP FOR BASS SYNTH
