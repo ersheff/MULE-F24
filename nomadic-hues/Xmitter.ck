@@ -9,9 +9,9 @@ public class Xmitter
 
   // default values, set actual values based on setup in the init function below, 
   // under the else branch
-  5 => int NUM_IN_FRONT;
-  6 => int NUM_IN_BACK;
-  5 => int NUM_BASS;
+  8 => int NUM_IN_FRONT;
+  7 => int NUM_IN_BACK;
+  15 => int NUM_BASS;
   int bassIndexes[NUM_BASS];
 
   fun void init(string arg)
@@ -34,24 +34,24 @@ public class Xmitter
       7 => NUM_IN_BACK;
 
       // front section
-      backing[0].setHost ( "IMSWEISLIAMBP-2.local", port ); // Oscar
-      backing[1].setHost ( "omelet.local", port ); // Micah
-      backing[2].setHost ( "pho.local", port ); // Ethan
-      backing[3].setHost ( "empanada.local", port ); // Ian
-      backing[4].setHost ( "meatloaf.local", port ); // Mitsi
-      backing[5].setHost ( "meatloaf.local", port ); // Megan
-      backing[6].setHost ( "meatloaf.local", port ); // Aidan
-      backing[7].setHost ( "meatloaf.local", port ); // Alex
+      backing[0].setHost ( "Oscars-MacBook-Air.local", port ); // Oscar
+      backing[1].setHost ( "LAPTOP-BEFMPJ5E.local", port ); // Micah
+      backing[2].setHost ( "Ethans-MacBook-Pro.local", port ); // Ethan
+      backing[3].setHost ( "Ians-MacBook-Pro.local", port ); // Ian
+      backing[4].setHost ( "LAPTOP-NPLAEJ80.local", port ); // Mitsi
+      backing[5].setHost ( "Megans-MacBook-Pro-6.local", port ); // Megan
+      backing[6].setHost ( "DESKTOP-JCSG891.local", port ); // Aidan
+      backing[7].setHost ( "Alex-LapPowerBottom.local", port ); // Alex
 
 
       // back section
-      backing[8].setHost ( "quinoa.local", port ); // Jackson
-      backing[9].setHost ( "nachos.local", port ); // Nate
-      backing[10].setHost ( "foiegras.local", port ); // Paul
-      backing[11].setHost ( "udon.local", port ); // Sydney
-      backing[12].setHost ( "chowder.local", port ); // Will
-      backing[13].setHost ( "meatloaf.local", port ); // Isa
-      backing[14].setHost ( "meatloaf.local", port ); // Artemis
+      backing[8].setHost ( "Jacksons-MacBook-Pro-2.local", port ); // Jackson
+      backing[9].setHost ( "nate.local", port ); // Nate
+      backing[10].setHost ( "LAPTOP-ROO7OHCS.local", port ); // Paul
+      backing[11].setHost ( "SydneysDell.local", port ); // Sydney
+      backing[12].setHost ( "Williams-MBP-2.local", port ); // Will
+      backing[13].setHost ( "Isas-MacBook-Pro.local", port ); // Isa
+      backing[14].setHost ( "Artemis.local", port ); // Artemis
 
 
       // SETUP FOR BASS SYNTH
