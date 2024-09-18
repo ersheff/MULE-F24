@@ -34,24 +34,24 @@ public class Xmitter
       7 => NUM_IN_BACK;
 
       // front section
-      backing[0].setHost ( "Oscars-MacBook-Air.local", port ); // Oscar
-      backing[1].setHost ( "LAPTOP-BEFMPJ5E.local", port ); // Micah
-      backing[2].setHost ( "Ethans-MacBook-Pro.local", port ); // Ethan
-      backing[3].setHost ( "Ians-MacBook-Pro.local", port ); // Ian
-      backing[4].setHost ( "LAPTOP-NPLAEJ80.local", port ); // Mitsi
-      backing[5].setHost ( "Megans-MacBook-Pro-6.local", port ); // Megan
-      backing[6].setHost ( "DESKTOP-JCSG891.local", port ); // Aidan
-      backing[7].setHost ( "Alex-LapPowerBottom.local", port ); // Alex
+      backing[0].setHost ( "192.168.0.3", port ); // Oscar 3
+      backing[1].setHost ( "192.168.0.4", port ); // Micah 4
+      backing[2].setHost ( "192.168.0.5", port ); // Ethan 5
+      backing[3].setHost ( "192.168.0.6", port ); // Ian 6
+      backing[4].setHost ( "192.168.0.7", port ); // Mitsi
+      backing[5].setHost ( "192.168.0.8.local", port ); // Megan
+      backing[6].setHost ( "192.168.0.9", port ); // Aidan
+      backing[7].setHost ( "192.168.0.10", port ); // Alex
 
 
       // back section
-      backing[8].setHost ( "Jacksons-MacBook-Pro-2.local", port ); // Jackson
-      backing[9].setHost ( "nate.local", port ); // Nate
-      backing[10].setHost ( "LAPTOP-ROO7OHCS.local", port ); // Paul
-      backing[11].setHost ( "SydneysDell.local", port ); // Sydney
-      backing[12].setHost ( "Williams-MBP-2.local", port ); // Will
-      backing[13].setHost ( "Isas-MacBook-Pro.local", port ); // Isa
-      backing[14].setHost ( "Artemis.local", port ); // Artemis
+      backing[8].setHost ( "192.168.0.11", port ); // Jackson
+      backing[9].setHost ( "192.168.0.12", port ); // Nate
+      backing[10].setHost ( "192.168.0.13", port ); // Paul
+      backing[11].setHost ( "192.168.0.14", port ); // Sydney
+      backing[12].setHost ( "192.168.0.15", port ); // Will
+      backing[13].setHost ( "192.168.0.16", port ); // Isa
+      backing[14].setHost ( "192.168.0.17", port ); // Artemis
 
 
       // SETUP FOR BASS SYNTH

@@ -12,7 +12,7 @@ TODOs:
 **To run server:**
 
 ```
-chuck run-nameless-server.ck:(local)
+chuck run-nameless-server.ck:
 `processing-java --sketch=`pwd`/world --run
 ```
 
@@ -22,7 +22,7 @@ if local is not specified, initializes clients as listed in the source.
 **To run locally (for testing purposes):**
 
 ```
-chuck run-nameless-go.ck:SHEFFIEMBA.local
+chuck run-nameless-go.ck:192.168.0.2
 ```
 
 if name of server is not specified, assumed to be `localhost`.
