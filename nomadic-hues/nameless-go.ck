@@ -252,13 +252,21 @@ fun void client()
   // the device number to open
   0 => int deviceNum;
 
-  // instantiate a HidIn object
-  HidIn hi;
+  // instantiate a Hid object
+  Hid hi;
   // structure to hold HID messages
   HidMsg msg;
 
   // open keyboard
   if( !hi.openKeyboard( deviceNum ) ) me.exit();
+
+  // accounts for bluetooth keyboard or touch bar on mac
+  while (hi.name().find("Magic") != -1 || hi.name().find("Touch") != -1) {
+    <<< "skipping '", hi.name(), "'" >>>;
+    deviceNum++;
+    hi.openKeyboard(deviceNum);
+  }
+
   // successful! print name of device
   <<< "keyboard '", hi.name(), "' ready" >>>;
 

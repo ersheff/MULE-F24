@@ -12,7 +12,7 @@ TODOs:
 **To run server:**
 
 ```
-chuck run-nameless-server.ck:
+chuck run-nameless-server.ck
 `processing-java --sketch=`pwd`/world --run
 ```
 
