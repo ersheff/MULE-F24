@@ -8,13 +8,13 @@
 // print channels
 <<< "* channels:", dac.channels() >>>;
 
-// if (me.arg(0) == "")
-// {
-//   <<< "You must specify the name of the server" >>>;
-//   <<< "- for local mode: \"local\"" >>>;
-//   <<< "- otherwise: the name of the machine running the server code." >>>;
-//   me.exit();
-// }
+if (me.arg(0) == "")
+{
+  <<< "You must specify the name of the server" >>>;
+  <<< "- for local mode: \"local\"" >>>;
+  <<< "- otherwise: the name of the machine running the server code." >>>;
+  me.exit();
+}
 
 /******************************************************************** Welcome */
 
@@ -44,7 +44,7 @@ tuned by the server. Some envelopes will tend towards more or less movement.
 
 int spacebar, upArrow, downArrow, leftArrow, rightArrow, escKey, jKey, oneKey, zeroKey;
 
-if (0 == "mac") {
+if (me.arg(1) == "mac") {
   44 => spacebar;
   82 => upArrow;
   81 => downArrow;
@@ -122,13 +122,16 @@ OscSend xmit;
 // server listening port
 6451 => int port;
 
-// me.arg(0) => string host;
-// if ((host == "l") || (host == "local")) {
-//   "localhost" => host;
-// }
+me.arg(0) => string host;
+if ((host == "l") || (host == "local")) {
+  "localhost" => host;
+}
+
+<<< me.arg(0) >>>;
+<<< me.arg(1) >>>;
 
 // aim the transmitter at port
-xmit.setHost ( "192.168.0.2", port );
+xmit.setHost ( host, port );
 
 /************************************************************** SOUND GLOBALS */
 
@@ -283,6 +286,15 @@ fun void client()
 
   // open keyboard
   if( !hi.openKeyboard( deviceNum ) ) me.exit();
+
+  hi.openKeyboard(deviceNum);
+
+  // accounts for bluetooth keyboard or touch bar on mac
+  while (hi.name().find("Magic") != -1 || hi.name().find("Touch") != -1) {
+    <<< "skipping '", hi.name(), "'" >>>;
+    deviceNum++;
+    hi.openKeyboard(deviceNum);
+  }
   // successful! print name of device
   <<< "keyboard '", hi.name(), "' ready" >>>;
 
