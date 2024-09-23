@@ -8,12 +8,13 @@
 // print channels
 <<< "* channels:", dac.channels() >>>;
 
-if (me.arg(0)=="") {
-  <<< "You must specify the name of the server" >>>;
-  <<< "- for local mode: \"local\"" >>>;
-  <<< "- otherwise: the name of the machine running the server code." >>>;
-  me.exit();
-}
+// if (me.arg(0) == "")
+// {
+//   <<< "You must specify the name of the server" >>>;
+//   <<< "- for local mode: \"local\"" >>>;
+//   <<< "- otherwise: the name of the machine running the server code." >>>;
+//   me.exit();
+// }
 
 /******************************************************************** Welcome */
 
@@ -43,9 +44,7 @@ tuned by the server. Some envelopes will tend towards more or less movement.
 
 int spacebar, upArrow, downArrow, leftArrow, rightArrow, escKey, jKey, oneKey, zeroKey;
 
-me.arg(1) => string sys;
-
-if (sys == "mac") {
+if (0 == "mac") {
   44 => spacebar;
   82 => upArrow;
   81 => downArrow;
@@ -123,13 +122,13 @@ OscSend xmit;
 // server listening port
 6451 => int port;
 
-me.arg(0) => string host;
-if ((host == "l") || (host == "local")) {
-  "localhost" => host;
-}
+// me.arg(0) => string host;
+// if ((host == "l") || (host == "local")) {
+//   "localhost" => host;
+// }
 
 // aim the transmitter at port
-xmit.setHost ( host, port );
+xmit.setHost ( "192.168.0.2", port );
 
 /************************************************************** SOUND GLOBALS */
 
@@ -275,23 +274,15 @@ fun void client()
 {
 
   // the device number to open
-  0 => int deviceNum;
+  1 => int deviceNum;
 
-  // instantiate a Hid object
-  Hid hi;
+  // instantiate a HidIn object
+  HidIn hi;
   // structure to hold HID messages
   HidMsg msg;
 
   // open keyboard
   if( !hi.openKeyboard( deviceNum ) ) me.exit();
-
-  // accounts for bluetooth keyboard or touch bar on mac
-  while (hi.name().find("Magic") != -1 || hi.name().find("Touch") != -1) {
-    <<< "skipping '", hi.name(), "'" >>>;
-    deviceNum++;
-    hi.openKeyboard(deviceNum);
-  }
-
   // successful! print name of device
   <<< "keyboard '", hi.name(), "' ready" >>>;
 
@@ -355,8 +346,8 @@ fun void client()
         //number pad, send tinkle 0 - 9
         if (msg.which >= oneKey && msg.which <= zeroKey)
         {
-          xmitAction(ActionEnum.tinkle(), (msg.which-(oneKey-1)));
-          spork ~tinkleSound(msg.which-(oneKey-1));
+          xmitAction(ActionEnum.tinkle(), (msg.which - (oneKey - 1) ));
+          spork ~tinkleSound(msg.which - (oneKey - 1));
         }
 
         /************************************************ ARROW KEY CONTROL */

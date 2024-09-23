@@ -9,9 +9,9 @@ public class Xmitter
 
   // default values, set actual values based on setup in the init function below, 
   // under the else branch
-  8 => int NUM_IN_FRONT;
-  7 => int NUM_IN_BACK;
-  15 => int NUM_BASS;
+  5 => int NUM_IN_FRONT;
+  6 => int NUM_IN_BACK;
+  5 => int NUM_BASS;
   int bassIndexes[NUM_BASS];
 
   fun void init(string arg)
@@ -37,22 +37,21 @@ public class Xmitter
       backing[0].setHost ( "192.168.0.3", port ); // Oscar
       backing[1].setHost ( "192.168.0.4", port ); // Micah
       backing[2].setHost ( "192.168.0.5", port ); // Ethan
-      // backing[3].setHost ( "192.168.0.6", port ); // Ian
-      backing[3].setHost ( "192.168.0.7", port ); // Mitsi
-      backing[4].setHost ( "192.168.0.8", port ); // Megan
-      backing[5].setHost ( "192.168.0.9", port ); // Aidan
-      backing[6].setHost ( "192.168.0.10", port ); // Alex
+      backing[3].setHost ( "192.168.0.6", port ); // Ian
+      backing[4].setHost ( "192.168.0.7", port ); // Mitsi
+      backing[5].setHost ( "192.168.0.8", port ); // Megan
+      backing[6].setHost ( "192.168.0.9", port ); // Aidan
+      backing[7].setHost ( "192.168.0.10", port ); // Alex
 
 
       // back section
-      // backing[8].setHost ( "192.168.0.11", port ); // Jackson
-      // backing[9].setHost ( "192.168.0.12", port ); // Nate
-      backing[7].setHost ( "192.168.0.13", port ); // Paul
-      backing[8].setHost ( "192.168.0.14", port ); // Sydney
-      backing[9].setHost ( "192.168.0.15", port ); // Will
-      backing[10].setHost ( "192.168.0.16", port ); // Isa
-      backing[11].setHost ( "192.168.0.17", port ); // Artemis
-
+      backing[8].setHost ( "192.168.0.11", port ); // Jackson
+      backing[9].setHost ( "192.168.0.12", port ); // Nate
+      backing[10].setHost ( "192.168.0.13", port ); // Paul
+      backing[11].setHost ( "192.168.0.14", port ); // Sydney
+      backing[12].setHost ( "192.168.0.15", port ); // Will
+      backing[13].setHost ( "192.168.0.16", port ); // Isa
+      backing[14].setHost ( "192.168.0.17", port ); // Artemis
 
       // SETUP FOR BASS SYNTH
       // write into the bassIndexes array negative numbers if you want less than
