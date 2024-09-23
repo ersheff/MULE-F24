@@ -8,11 +8,15 @@
 // print channels
 <<< "* channels:", dac.channels() >>>;
 
-if (me.arg(0) == "")
-{
+if (me.arg(0)=="") {
   <<< "You must specify the name of the server" >>>;
   <<< "- for local mode: \"local\"" >>>;
   <<< "- otherwise: the name of the machine running the server code." >>>;
+  me.exit();
+}
+
+if (me.arg(1)=="") {
+  <<< "You must specify your system for key mapping!" >>>;
   me.exit();
 }
 
@@ -42,6 +46,32 @@ tuned by the server. Some envelopes will tend towards more or less movement.
 "
 >>>;
 
+int spacebar, upArrow, downArrow, leftArrow, rightArrow, escKey, jKey, oneKey, zeroKey;
+
+me.arg(1) => string sys;
+
+if (sys == "mac") {
+  44 => spacebar;
+  82 => upArrow;
+  81 => downArrow;
+  80 => leftArrow;
+  79 => rightArrow;
+  41 => escKey;
+  13 => jKey;
+  30 => oneKey;
+  39 => zeroKey;
+}
+else {
+  44 => spacebar;
+  82 => upArrow;
+  81 => downArrow;
+  80 => leftArrow;
+  79 => rightArrow;
+  41 => escKey;
+  13 => jKey;
+  30 => oneKey;
+  39 => zeroKey;
+}
 
 /******************************************************************** Globals */
 
@@ -291,7 +321,7 @@ fun void client()
     // get exactly one messages
     if (hi.recv( msg ) && msg.isButtonDown())
     {
-      if ((msg.which == 44) && (hasEntered == false))
+      if ((msg.which == spacebar) && (hasEntered == false))
       {
         <<< "YOU HAVE ENTERED THE GRID" >>>;
         true => hasEntered;
@@ -305,7 +335,7 @@ fun void client()
         /********************************************* Player Sound Control */
 
         //escape, allow nodes to leave
-        if (msg.which == 41)
+        if (msg.which == escKey)
         {
           <<< "YOU HAVE DEPARTED THE GRID. PRESS SPACE TO RE-ENTER" >>>;
           false => hasEntered; //reset to allow spacebar for reentry
@@ -321,28 +351,28 @@ fun void client()
         */
 
         //j, send jump
-        if (msg.which == 13)
+        if (msg.which == jKey)
         {
           xmitAction(ActionEnum.jump());
           spork ~jumpSound();
         }
 
         //number pad, send tinkle 0 - 9
-        if (msg.which >= 30 && msg.which <= 39)
+        if (msg.which >= oneKey && msg.which <= zeroKey)
         {
-          xmitAction(ActionEnum.tinkle(), (msg.which - 29));
-          spork ~tinkleSound(msg.which - 29);
+          xmitAction(ActionEnum.tinkle(), (msg.which-oneKey-1));
+          spork ~tinkleSound(msg.which-oneKey-1);
         }
 
         /************************************************ ARROW KEY CONTROL */
         //up
-        if (msg.which == 82) xmitMove(1, 0);
+        if (msg.which == upArrow) xmitMove(1, 0);
         //down
-        if (msg.which == 81) xmitMove(-1, 0);
+        if (msg.which == downArrow) xmitMove(-1, 0);
         //left
-        if (msg.which == 80) xmitMove(0, -1);
+        if (msg.which == leftArrow) xmitMove(0, -1);
         //right
-        if (msg.which == 79) xmitMove(0, 1);
+        if (msg.which == rightArrow) xmitMove(0, 1);
       }
 
       // allow the clients to accumulate a buffer of messages.
