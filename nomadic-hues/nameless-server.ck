@@ -804,7 +804,7 @@ fun void keyboard()
   1 => int deviceNum;
 
   // instantiate a HidIn object
-  HidIn hi;
+  Hid hi;
   // structure to hold HID messages
   HidMsg msg;
 

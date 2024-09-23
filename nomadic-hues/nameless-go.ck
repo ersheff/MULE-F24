@@ -127,9 +127,6 @@ if ((host == "l") || (host == "local")) {
   "localhost" => host;
 }
 
-<<< me.arg(0) >>>;
-<<< me.arg(1) >>>;
-
 // aim the transmitter at port
 xmit.setHost ( host, port );
 
@@ -277,10 +274,10 @@ fun void client()
 {
 
   // the device number to open
-  1 => int deviceNum;
+  0 => int deviceNum;
 
   // instantiate a HidIn object
-  HidIn hi;
+  Hid hi;
   // structure to hold HID messages
   HidMsg msg;
 
