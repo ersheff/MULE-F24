@@ -34,24 +34,24 @@ public class Xmitter
       7 => NUM_IN_BACK;
 
       // front section
-      backing[0].setHost ( "192.168.0.3", port ); // Oscar 3
-      backing[1].setHost ( "192.168.0.4", port ); // Micah 4
-      backing[2].setHost ( "192.168.0.5", port ); // Ethan 5
-      backing[3].setHost ( "192.168.0.6", port ); // Ian 6
-      // backing[4].setHost ( "192.168.0.7", port ); // Mitsi NOT CONFIGURED
-      backing[5].setHost ( "192.168.0.8", port ); // Megan
-      // backing[6].setHost ( "192.168.0.9", port ); // Aidan NOT CONFIGURED
-      // backing[7].setHost ( "192.168.0.10", port ); // Alex POSSIBLE ISSUES
+      backing[0].setHost ( "192.168.0.3", port ); // Oscar
+      backing[1].setHost ( "192.168.0.4", port ); // Micah
+      backing[2].setHost ( "192.168.0.5", port ); // Ethan
+      // backing[3].setHost ( "192.168.0.6", port ); // Ian
+      backing[3].setHost ( "192.168.0.7", port ); // Mitsi
+      backing[4].setHost ( "192.168.0.8", port ); // Megan
+      backing[5].setHost ( "192.168.0.9", port ); // Aidan
+      backing[6].setHost ( "192.168.0.10", port ); // Alex
 
 
       // back section
-      backing[8].setHost ( "192.168.0.11", port ); // Jackson
-      backing[9].setHost ( "192.168.0.12", port ); // Nate
-      backing[10].setHost ( "192.168.0.13", port ); // Paul
-      backing[11].setHost ( "192.168.0.14", port ); // Sydney
-      // backing[12].setHost ( "192.168.0.15", port ); // Will NOT CONFIGURED
-      backing[13].setHost ( "192.168.0.16", port ); // Isa
-      backing[14].setHost ( "192.168.0.17", port ); // Artemis
+      // backing[8].setHost ( "192.168.0.11", port ); // Jackson
+      // backing[9].setHost ( "192.168.0.12", port ); // Nate
+      backing[7].setHost ( "192.168.0.13", port ); // Paul
+      backing[8].setHost ( "192.168.0.14", port ); // Sydney
+      backing[9].setHost ( "192.168.0.15", port ); // Will
+      backing[10].setHost ( "192.168.0.16", port ); // Isa
+      backing[11].setHost ( "192.168.0.17", port ); // Artemis
 
 
       // SETUP FOR BASS SYNTH

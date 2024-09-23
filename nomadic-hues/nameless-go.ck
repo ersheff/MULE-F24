@@ -15,11 +15,6 @@ if (me.arg(0)=="") {
   me.exit();
 }
 
-if (me.arg(1)=="") {
-  <<< "You must specify your system for key mapping!" >>>;
-  me.exit();
-}
-
 /******************************************************************** Welcome */
 
 <<<
