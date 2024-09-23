@@ -62,15 +62,15 @@ if (sys == "mac") {
   39 => zeroKey;
 }
 else {
-  44 => spacebar;
-  82 => upArrow;
-  81 => downArrow;
-  80 => leftArrow;
-  79 => rightArrow;
-  41 => escKey;
-  13 => jKey;
-  30 => oneKey;
-  39 => zeroKey;
+  57 => spacebar;
+  200 => upArrow;
+  208 => downArrow;
+  203 => leftArrow;
+  205 => rightArrow;
+  1 => escKey;
+  36 => jKey;
+  2 => oneKey;
+  11 => zeroKey;
 }
 
 /******************************************************************** Globals */
@@ -360,8 +360,8 @@ fun void client()
         //number pad, send tinkle 0 - 9
         if (msg.which >= oneKey && msg.which <= zeroKey)
         {
-          xmitAction(ActionEnum.tinkle(), (msg.which-oneKey-1));
-          spork ~tinkleSound(msg.which-oneKey-1);
+          xmitAction(ActionEnum.tinkle(), (msg.which-(oneKey-1)));
+          spork ~tinkleSound(msg.which-(oneKey-1));
         }
 
         /************************************************ ARROW KEY CONTROL */
