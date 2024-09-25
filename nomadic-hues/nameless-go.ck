@@ -42,7 +42,7 @@ tuned by the server. Some envelopes will tend towards more or less movement.
 "
 >>>;
 
-int spacebar, upArrow, downArrow, leftArrow, rightArrow, escKey, jKey, oneKey, zeroKey;
+int spacebar, upArrow, downArrow, leftArrow, rightArrow, escKey, dKey, jKey, oneKey, zeroKey;
 
 if (me.arg(1) == "mac") {
   44 => spacebar;
@@ -51,6 +51,7 @@ if (me.arg(1) == "mac") {
   80 => leftArrow;
   79 => rightArrow;
   41 => escKey;
+  7 => dKey;
   13 => jKey;
   30 => oneKey;
   39 => zeroKey;
@@ -62,6 +63,7 @@ else {
   203 => leftArrow;
   205 => rightArrow;
   1 => escKey;
+  0 => dKey;
   36 => jKey;
   2 => oneKey;
   11 => zeroKey;
@@ -284,14 +286,13 @@ fun void client()
   // open keyboard
   if( !hi.openKeyboard( deviceNum ) ) me.exit();
 
-  hi.openKeyboard(deviceNum);
-
   // accounts for bluetooth keyboard or touch bar on mac
   while (hi.name().find("Magic") != -1 || hi.name().find("Touch") != -1) {
     <<< "skipping '", hi.name(), "'" >>>;
     deviceNum++;
     hi.openKeyboard(deviceNum);
   }
+  
   // successful! print name of device
   <<< "keyboard '", hi.name(), "' ready" >>>;
 

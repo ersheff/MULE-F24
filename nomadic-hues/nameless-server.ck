@@ -801,7 +801,7 @@ fun void g_updateWorld(int which) {
 fun void keyboard()
 {
   // the device number to open
-  1 => int deviceNum;
+  0 => int deviceNum;
 
   // instantiate a HidIn object
   Hid hi;
@@ -810,10 +810,18 @@ fun void keyboard()
 
   // open keyboard
   if( !hi.openKeyboard( deviceNum ) ) me.exit();
+
+  // accounts for bluetooth keyboard or touch bar on mac
+  while (hi.name().find("Magic") != -1 || hi.name().find("Touch") != -1) {
+    <<< "skipping '", hi.name(), "'" >>>;
+    deviceNum++;
+    hi.openKeyboard(deviceNum);
+  }
+
   // successful! print name of device
   <<< "keyboard '", hi.name(), "' ready" >>>;
+  
   // infinite event loop
-
   while( true )
   {
     // wait on event
