@@ -32,6 +32,12 @@ while (hi.name().find("Magic") != -1 || hi.name().find("Touch") != -1) {
 
 // ----- key numbers, mac vs. windows -----
 
+/*
+Values in the nameless-go.ck file have been replaced with these variables.
+*/
+
+int spacebar, upArrow, downArrow, leftArrow, rightArrow, escKey, dKey, jKey, oneKey, zeroKey;
+
 if (me.arg(1) == "mac") {
   44 => spacebar;
   82 => upArrow;
