@@ -330,8 +330,8 @@ fun void client()
       {
         /********************************************* Player Sound Control */
 
-        //escape, allow nodes to leave
-        if (msg.which == escKey)
+        //escape, allow nodes to leave, optionally use ~ on touch bar macs
+        if (msg.which == escKey || msg.which == 53)
         {
           <<< "YOU HAVE DEPARTED THE GRID. PRESS SPACE TO RE-ENTER" >>>;
           false => hasEntered; //reset to allow spacebar for reentry

@@ -29,35 +29,35 @@ public class Xmitter
       <<< "Initializing Xmitter for non-local" >>>;
 
       // SETUP CLIENT TARGETS
-      2 => num_targets;
-      1 => NUM_IN_FRONT;
-      1 => NUM_IN_BACK;
+      10 => num_targets;
+      5 => NUM_IN_FRONT;
+      5 => NUM_IN_BACK;
 
       // front section
       backing[0].setHost ( "192.168.0.3", port ); // Oscar
-      // backing[1].setHost ( "192.168.0.4", port ); // Micah
-      // backing[2].setHost ( "192.168.0.5", port ); // Ethan
+      backing[1].setHost ( "192.168.0.4", port ); // Micah
+      backing[2].setHost ( "192.168.0.5", port ); // Ethan
       // backing[3].setHost ( "192.168.0.6", port ); // Ian
-      // backing[4].setHost ( "192.168.0.7", port ); // Mitsi
-      // backing[5].setHost ( "192.168.0.8", port ); // Megan
+      backing[3].setHost ( "192.168.0.7", port ); // Mitsi
+      backing[4].setHost ( "192.168.0.8", port ); // Megan
       // backing[6].setHost ( "192.168.0.9", port ); // Aidan
-      // backing[7].setHost ( "192.168.0.10", port ); // Alex
+      // backing[5].setHost ( "192.168.0.10", port ); // Alex
 
 
       // back section
       // backing[8].setHost ( "192.168.0.11", port ); // Jackson
       // backing[9].setHost ( "192.168.0.12", port ); // Nate
-      backing[1].setHost ( "192.168.0.13", port ); // Paul
-      // backing[11].setHost ( "192.168.0.14", port ); // Sydney
-      // backing[12].setHost ( "192.168.0.15", port ); // Will
-      // backing[13].setHost ( "192.168.0.16", port ); // Isa
-      // backing[14].setHost ( "192.168.0.17", port ); // Artemis
+      backing[5].setHost ( "192.168.0.13", port ); // Paul
+      backing[6].setHost ( "192.168.0.14", port ); // Sydney
+      backing[7].setHost ( "192.168.0.15", port ); // Will
+      backing[8].setHost ( "192.168.0.16", port ); // Isa
+      backing[9].setHost ( "192.168.0.17", port ); // Artemis
 
       // SETUP FOR BASS SYNTH
       // write into the bassIndexes array negative numbers if you want less than
       // NUM_BASS basses (handled as special case by the sendBass function)
-      2 => NUM_BASS;
-      [0,1] @=> bassIndexes;
+      11 => NUM_BASS;
+      [0,1,2,3,4,5,6,7,8,9] @=> bassIndexes;
     }
   }
 
