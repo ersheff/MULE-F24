@@ -1,4 +1,4 @@
-const ws = new WebSocket("ws://localhost:3000?role=player");
+const ws = new WebSocket("ws://192.168.0.2:3000?role=player");
 const buttons = document.querySelectorAll("button");
 
 let clockCount = 0;

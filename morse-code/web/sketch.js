@@ -1,4 +1,4 @@
-const ws = new WebSocket("ws://localhost:3000?role=visuals");
+const ws = new WebSocket("ws://192.168.0.2:3000?role=visuals");
 const sonars = [];
 let ripples = [];
 
