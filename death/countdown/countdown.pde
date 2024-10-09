@@ -15,7 +15,7 @@ void setup() {
 void draw() {
     fill(0);
     for (int i = 0; i < 200; i++) {
-      rect(random(width), random(height), random(5)+1, random(5)+1);
+      rect(random(width), random(height), random(10)+1, random(10)+1);
     }
   
   if (millis()-lastOneMillis >= 1000) {
@@ -43,6 +43,6 @@ void draw() {
     //  rect(random(width), random(height), random(50)+10, random(50)+10);
     //}
   }
-  // fill(0,0,0,1);
-  // rect(0, 0, 1280, 720);
+  fill(0,0,0,3);
+  rect(0, 0, 1280, 720);
 }
