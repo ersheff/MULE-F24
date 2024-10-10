@@ -4,17 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://unpkg.com/tone"></script>
   <script src="player.js" defer></script>
   <title>Document</title>
 </head>
 
 <body>
-  <button>1</button>
-  <button>2</button>
-  <button>3</button>
-  <button>4</button>
-  <button>5</button>
-  <p>Clock: <span>0</span></p>
+  <button id="tone-start">Start</button>
+  <button class="sonar">1</button>
+  <button class="sonar">2</button>
+  <button class="sonar">3</button>
+  <button class="sonar">4</button>
+  <button class="sonar">5</button>
+  <p>Drift correction: <span id="drift-correction-display"></span>ms</p>
 </body>
 
 </html>
