@@ -523,6 +523,7 @@
 , 			{
 				"box" : 				{
 					"buffername" : "icarus3",
+					"chanoffset" : 0,
 					"id" : "obj-196",
 					"maxclass" : "waveform~",
 					"numinlets" : 5,
@@ -1267,6 +1268,7 @@
 , 			{
 				"box" : 				{
 					"buffername" : "icarus2",
+					"chanoffset" : 0,
 					"id" : "obj-137",
 					"maxclass" : "waveform~",
 					"numinlets" : 5,
@@ -2107,6 +2109,7 @@
 , 			{
 				"box" : 				{
 					"buffername" : "icarus1",
+					"chanoffset" : 0,
 					"id" : "obj-18",
 					"maxclass" : "waveform~",
 					"numinlets" : 5,
