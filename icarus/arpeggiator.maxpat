@@ -8280,6 +8280,26 @@
 							"out" : 1,
 							"gain" : 1.0
 						}
+, 						{
+							"in" : 7,
+							"out" : 2,
+							"gain" : 1.0
+						}
+, 						{
+							"in" : 3,
+							"out" : 3,
+							"gain" : 1.0
+						}
+, 						{
+							"in" : 8,
+							"out" : 4,
+							"gain" : 1.0
+						}
+, 						{
+							"in" : 11,
+							"out" : 5,
+							"gain" : 1.0
+						}
  ],
 					"dividers" : "none",
 					"fontface" : 0,

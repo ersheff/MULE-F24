@@ -1,0 +1,15 @@
+// format for each line is:
+// file1 reverb1 wet1 file2 reverb2 wet2 file3 reverb3 wet3
+// reverb and wet is from 0-100
+
+// settings movement 1
+1, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50;
+
+// settings movement 2
+2, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50;
+
+// settings movement 3
+3, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50;
+
+// settings movement 4
+4, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50;
