@@ -1,0 +1,19 @@
+<control> default_path=Samples\
+
+<group>
+loop_mode=one_shot
+
+<region> sample=C4.wav pitch_keycenter=60 lokey=48 hikey=51
+<region> sample=E4.wav pitch_keycenter=64 lokey=52 hikey=53
+<region> sample=F#4.wav pitch_keycenter=66 lokey=54 hikey=56
+<region> sample=A4.wav pitch_keycenter=69 lokey=57 hikey=59
+
+<region> sample=C4.wav pitch_keycenter=60 lokey=60 hikey=63
+<region> sample=E4.wav pitch_keycenter=64 lokey=64 hikey=65
+<region> sample=F#4.wav pitch_keycenter=66 lokey=66 hikey=68
+<region> sample=A4.wav pitch_keycenter=69 lokey=69 hikey=71
+
+<region> sample=C4.wav pitch_keycenter=60 lokey=72 hikey=75
+<region> sample=E4.wav pitch_keycenter=64 lokey=76 hikey=77
+<region> sample=F#4.wav pitch_keycenter=66 lokey=78 hikey=80
+<region> sample=A4.wav pitch_keycenter=69 lokey=81 hikey=89
