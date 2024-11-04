@@ -1,0 +1,24 @@
+<control> default_path=Samples\
+
+<global>ampeg_release=0.8
+global_volume=6
+
+<region> sample=Organ_A0.wav pitch_keycenter=21 lokey=9 hikey=27
+<region> sample=Organ_C1.wav pitch_keycenter=24 lokey=28 hikey=31
+<region> sample=Organ_E1.wav pitch_keycenter=28 lokey=32 hikey=34
+<region> sample=Organ_F#1.wav pitch_keycenter=30 lokey=35 hikey=38
+
+<region> sample=Organ_A1.wav pitch_keycenter=33 lokey=39 hikey=43
+<region> sample=Organ_C2.wav pitch_keycenter=36 lokey=44 hikey=47
+<region> sample=Organ_E2.wav pitch_keycenter=40 lokey=48 hikey=50
+<region> sample=Organ_F#2.wav pitch_keycenter=42 lokey=51 hikey=54
+
+<region> sample=Organ_A2.wav pitch_keycenter=45 lokey=55 hikey=59
+<region> sample=Organ_C3.wav pitch_keycenter=48 lokey=60 hikey=63
+<region> sample=Organ_E3.wav pitch_keycenter=52 lokey=64 hikey=66
+<region> sample=Organ_F#3.wav pitch_keycenter=54 lokey=67 hikey=70
+
+<region> sample=Organ_A3.wav pitch_keycenter=57 lokey=71 hikey=75
+<region> sample=Organ_C4.wav pitch_keycenter=60 lokey=76 hikey=79
+<region> sample=Organ_E4.wav pitch_keycenter=64 lokey=80 hikey=82
+<region> sample=Organ_F#4.wav pitch_keycenter=66 lokey=83 hikey=86

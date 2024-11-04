@@ -1,7 +1,10 @@
 <control> default_path=Samples\
 
-<region> sample=bass-drum.wav key=0 loop_mode=one_shot
-<region> sample=metal.wav key=1 loop_mode=one_shot
-<region> sample=brake-drum.wav key=2 loop_mode=one_shot
-<region> sample=pipe1.wav key=3 loop_mode=one_shot
-<region> sample=pipe2.wav key=4 loop_mode=one_shot
+<group>
+loop_mode=one_shot
+
+<region> sample=bass-drum.wav key=0
+<region> sample=metal.wav key=1
+<region> sample=brake-drum.wav key=2
+<region> sample=pipe1.wav key=3
+<region> sample=pipe2.wav key=4
