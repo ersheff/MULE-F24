@@ -1457,7 +1457,17 @@
 						}
 , 						{
 							"in" : 0,
-							"out" : 4,
+							"out" : 1,
+							"gain" : 1.0
+						}
+, 						{
+							"in" : 2,
+							"out" : 2,
+							"gain" : 1.0
+						}
+, 						{
+							"in" : 1,
+							"out" : 3,
 							"gain" : 1.0
 						}
  ],
@@ -1825,18 +1835,6 @@
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 3013.0, 1983.0, 127.0, 22.0 ],
 					"text" : "sfizz~ Harp_Icarus.sfz"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-368",
-					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 2,
-					"outlettype" : [ "float", "float" ],
-					"patching_rect" : [ 3455.0, 1890.0, 101.0, 22.0 ],
-					"text" : "makenote 60 400"
 				}
 
 			}
@@ -11265,6 +11263,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-359", 1 ],
+					"source" : [ "obj-120", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-359", 0 ],
+					"source" : [ "obj-120", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-13", 1 ],
 					"source" : [ "obj-121", 1 ]
 				}
@@ -13337,20 +13349,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-357", 0 ],
 					"source" : [ "obj-367", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-359", 1 ],
-					"source" : [ "obj-368", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-359", 0 ],
-					"source" : [ "obj-368", 0 ]
 				}
 
 			}
