@@ -3,13 +3,13 @@
 // reverb and wet is from 0-100
 
 // settings movement 1
-1, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50;
+1, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50 file4.wav 50 50;
 
 // settings movement 2
-2, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50;
+2, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50 file4.wav 50 50;
 
 // settings movement 3
-3, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50;
+3, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50 file4.wav 50 50;
 
 // settings movement 4
-4, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50;
+4, file1.wav 50 50 file2.wav 50 50 file3.wav 50 50 file4.wav 50 50;
