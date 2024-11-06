@@ -3,8 +3,8 @@
 <group>
 loop_mode=one_shot
 
-<region> sample=bass-drum.wav key=0
-<region> sample=metal.wav key=1
-<region> sample=brake-drum.wav key=2
-<region> sample=pipe1.wav key=3
-<region> sample=pipe2.wav key=4
+<region> sample=bass-drum.wav pitch_keycenter=12 lokey=0 hikey=0
+<region> sample=metal.wav pitch_keycenter=20 lokey=1 hikey=1 volume=-3
+<region> sample=brake-drum.wav pitch_keycenter=14 lokey=2 hikey=2
+<region> sample=pipe1.wav pitch_keycenter=15 lokey=3 hikey=3
+<region> sample=pipe2.wav pitch_keycenter=6 lokey=4 hikey=4
