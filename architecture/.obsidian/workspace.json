@@ -1,0 +1,170 @@
+{
+  "main": {
+    "id": "5e5cd47ea60ef70c",
+    "type": "split",
+    "children": [
+      {
+        "id": "6de020cc7729b4e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3cfc65f7575d84ea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "in-c/cheat-sheet.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "cheat-sheet"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ca58e8d4393aa575",
+    "type": "split",
+    "children": [
+      {
+        "id": "c965f2b9726a763a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0eb938cac62dd9c6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d0ff8384047d7e5d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f806022c8e5e1f63",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7751abb19e72c50f",
+    "type": "split",
+    "children": [
+      {
+        "id": "7e264d1e92dfeaec",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "87eb2df776933c31",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "in-c/cheat-sheet.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for cheat-sheet"
+            }
+          },
+          {
+            "id": "e50f417c97679b85",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "in-c/cheat-sheet.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from cheat-sheet"
+            }
+          },
+          {
+            "id": "fa154cebd82377bb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c28ba8369e9041d9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "in-c/cheat-sheet.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of cheat-sheet"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "3cfc65f7575d84ea",
+  "lastOpenFiles": [
+    "in-c/cheat-sheet.pdf",
+    "in-c/InC-Score.pdf"
+  ]
+}
