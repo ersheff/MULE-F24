@@ -15,7 +15,7 @@ int maxDots = 500;
 int dotDim;
 
 int dotOpacity = 255;
-float fadeInAmount = 50;
+float fadeInAmount = 40;
 float fadeOutAmount = 3;
 float driftMin = -0.05;
 float driftMax = 0.05;
@@ -24,7 +24,9 @@ float dropMax = 0.2;
 
 void setup() {
   size(1280, 720, P3D);
-  dotDim = width/15;
+  fullScreen();
+  noCursor();
+  dotDim = width/10;
   noStroke();
   oscP5 = new OscP5(this, 7001); // Listen for OSC messages on port 7001
   
