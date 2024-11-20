@@ -9,6 +9,7 @@ export class MorsePlayer {
 
         this.loop = true;
         this.running = false;
+        this.sustain = false;
 
         this.morseString = '';
         this.stringIndex = 0;
@@ -80,25 +81,31 @@ export class MorsePlayer {
     }
 
     playDit() {
-        this.dit.stop();
         setTimeout(() => {
             this.dit.start();
         }, 10);
     }
 
     playDah() {
-        this.dah.stop();
         setTimeout(() => {
             this.dah.start();
         }, 10);
     }
 
     playDitPitched(pitch) {
-        this.ditSampler.triggerAttackRelease(pitch, "8n");
+        if(this.sustain) {
+            this.ditSampler.triggerAttackRelease(pitch, "1n");
+        } else {
+            this.ditSampler.triggerAttackRelease(pitch, "4n");
+        }
     }
 
     playDahPitched(pitch) {
-        this.dahSampler.triggerAttackRelease(pitch, "8n");
+        if(this.sustain) {
+            this.dahSampler.triggerAttackRelease(pitch, "1n")
+        } else {
+            this.dahSampler.triggerAttackRelease(pitch, "4n")
+        }
     }
 
     encode(text) {
