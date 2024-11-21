@@ -3,7 +3,7 @@ import '/node_modules/jquery/dist/jquery.min.js';
 import '/node_modules/tone/build/Tone.js';
 
 const morsePlayer = new MorsePlayer();
-const url = '192.168.1.4:8000';
+const url = '192.168.0.3:8000';
 const socket = new WebSocket(`ws://${url}?role=player`);
 let morseString = '';
 let thisPlayer = 0;
@@ -78,6 +78,10 @@ $(function () {
         let sus = $(this).prop('checked');
         morsePlayer.sustain = sus;
     })
+
+    $('#verbToggle').on('change', function() {
+        morsePlayer.toggleVerb();
+    });
 });
 
 function restartMorse() {
