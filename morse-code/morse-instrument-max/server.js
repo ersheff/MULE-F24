@@ -31,8 +31,15 @@ wss.on('connection', (ws, req) => {
 
   ws.on("message", (message) => {
     const data = JSON.parse(message);
+    console.log(data);
 
     // If the message is from a player, send it to the visuals connection
+    if (data.scoreIndex !== undefined && ws.role === "player") {
+      wss.clients.forEach((client) => {
+        client.send(JSON.stringify(data));
+      });
+    }
+
     if (ws.role === "player") {
       wss.clients.forEach((client) => {
         if (client.readyState === ws.OPEN && client.role === "visuals") {

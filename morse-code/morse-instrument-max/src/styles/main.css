@@ -18,32 +18,3 @@ textarea::placeholder {
     font-size: xx-large !important;
     height: 100px !important;
 }
-
-@keyframes pulse {
-    0% {
-        border: 2px solid lightgreen;
-        margin: -2px;
-        color: black;
-    }
-    100% {
-        border: 2px solid white;
-        margin: -2px;
-        color: white;
-    }
-}
-
-.playing-icon {
-    background-color: lightgreen !important;
-    color: black;
-    cursor: default;
-    animation: pulse 0.5s alternate infinite;
-    display: none;
-}
-
-.playing-icon:hover {
-    color: black !important;
-}
-
-.highlight {
-    color: red !important;
-}
