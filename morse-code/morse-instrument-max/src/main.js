@@ -1,15 +1,36 @@
 import { MorsePlayer } from './morse-player.js';
 import '/node_modules/jquery/dist/jquery.min.js';
 import '/node_modules/tone/build/Tone.js';
+import { Score } from './score.js';
 
 const morsePlayer = new MorsePlayer();
-const url = '192.168.0.3:8000';
+let scoreIndex = 0;
+
+const url = 'localhost:8000';
 const socket = new WebSocket(`ws://${url}?role=player`);
 let morseString = '';
 let thisPlayer = 0;
 
+socket.addEventListener('message', function (event) {
+    const data = JSON.parse(event.data);
+    console.log(data);
+    if (data.scoreIndex !== undefined) {
+        scoreIndex = data.scoreIndex;
+        $('#score').html(Score[scoreIndex]);  
+    }
+});
 
 $(function () {
+    $(document).keydown(function (e) {
+        if (e.which == 37) { // left arrow key
+            scoreIndex = (scoreIndex > 0) ? scoreIndex - 1 : Score.length - 1;
+        } else if (e.which == 39) { // right arrow key
+            scoreIndex = (scoreIndex < Score.length - 1) ? scoreIndex + 1 : 0;
+        }
+
+        updateScore();
+    });
+
     $('#textInput').keydown(function (e) {
         if (e.which == 13) {
             textToMorse();
@@ -82,6 +103,8 @@ $(function () {
     $('#verbToggle').on('change', function() {
         morsePlayer.toggleVerb();
     });
+
+    $('#score').html(Score[0]);
 });
 
 function restartMorse() {
@@ -104,6 +127,10 @@ function textToMorse() {
     $('#textOutput').append(morse);
 }
 
+function updateScore() {
+    socket.send(JSON.stringify({scoreIndex: scoreIndex}));
+}
+
 window.max.bindInlet('beat', () => {
     if (morsePlayer.running) {
         if (morsePlayer.morseString != morseString) {
@@ -118,6 +145,7 @@ window.max.bindInlet('beat', () => {
                 type: morsePlayer.morseArr[morsePlayer.index],
             };
             socket.send(JSON.stringify(message));
+            window.max.outlet(scoreIndex);
         }
     }
 });
