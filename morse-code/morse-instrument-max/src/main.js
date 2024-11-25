@@ -131,20 +131,20 @@ function updateScore() {
     socket.send(JSON.stringify({scoreIndex: scoreIndex}));
 }
 
-// window.max.bindInlet('beat', () => {
-//     if (morsePlayer.running) {
-//         if (morsePlayer.morseString != morseString) {
-//             morsePlayer.changeMorseString(morseString);
-//             textToMorse();
-//         }
+window.max.bindInlet('beat', () => {
+    if (morsePlayer.running) {
+        if (morsePlayer.morseString != morseString) {
+            morsePlayer.changeMorseString(morseString);
+            textToMorse();
+        }
 
-//         morsePlayer.playMorse();
-//         if (morsePlayer.morseArr[morsePlayer.index] != '') {
-//             const message = {
-//                 player: thisPlayer,
-//                 type: morsePlayer.morseArr[morsePlayer.index],
-//             };
-//             socket.send(JSON.stringify(message));
-//         }
-//     }
-// });
+        morsePlayer.playMorse();
+        if (morsePlayer.morseArr[morsePlayer.index] != '') {
+            const message = {
+                player: thisPlayer,
+                type: morsePlayer.morseArr[morsePlayer.index],
+            };
+            socket.send(JSON.stringify(message));
+        }
+    }
+});
