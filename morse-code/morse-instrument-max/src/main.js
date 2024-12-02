@@ -6,7 +6,7 @@ import { Score } from './score.js';
 const morsePlayer = new MorsePlayer();
 let scoreIndex = 0;
 
-const url = 'localhost:8000';
+const url = '192.168.0.3:8000';
 const socket = new WebSocket(`ws://${url}?role=player`);
 let morseString = '';
 let thisPlayer = 0;
