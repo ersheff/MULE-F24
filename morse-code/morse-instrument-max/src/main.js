@@ -145,7 +145,7 @@ window.max.bindInlet('beat', () => {
                 type: morsePlayer.morseArr[morsePlayer.index],
             };
             socket.send(JSON.stringify(message));
-            window.max.outlet(scoreIndex);
+            window.max.outlet(thisPlayer);
         }
     }
 });
