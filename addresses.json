@@ -1,0 +1,51 @@
+{
+  "hostnames": {
+    "eric": "SHEFFIEMBA.local",
+    "oscar": "oscar-mba.local",
+    "micah": "LAPTOP-BEFMPJ5E.local",
+    "ethan": "Ethans-MacBook-Pro.local",
+    "ian": "Ians-MBP.local",
+    "mitsi": "LAPTOP-NPLAEJ80.local",
+    "megan": "Megans-MacBook-Pro.local",
+    "aidan": "DESKTOP-JCSG891.local",
+    "alex": "Alex-LapPowerBottom.local",
+    "jackson": "Jacksons-MacBook-Pro-2",
+    "nate": "???",
+    "paul": "LAPTOP-ROO7OHCS.local",
+    "sydney": "SydneysDell.local",
+    "will": "Williams-MBP-2.local",
+    "isa": "Isas-MacBook-Pro.local",
+    "artemis": "Artemis.local"
+  },
+  "ips": {
+    "eric": "192.168.0.2",
+    "oscar": "192.168.0.3",
+    "micah": "192.168.0.4",
+    "ethan": "192.168.0.5",
+    "ian": "192.168.0.6",
+    "mitsi": "192.168.0.7",
+    "megan": "192.168.0.8",
+    "aidan": "192.168.0.9",
+    "alex": "192.168.0.10",
+    "jackson": "192.168.0.11",
+    "nate": "192.168.0.12",
+    "paul": "192.168.0.13",
+    "sydney": "192.168.0.14",
+    "will": "192.168.0.15",
+    "isa": "192.168.0.16",
+    "artemis": "192.168.0.17"
+  },
+  "icarian": {
+    "hostnames": {
+      "video": "Ians-MBP.local",
+      "arpeggiator": "Artemis.local",
+      "looper": "LAPTOP-NPLAEJ80.local"
+    }
+  },
+  "morse": {
+    "hostnames": {
+      "server": "oscar-mba.local",
+      "visuals": "SHEFFIEMBA.local"
+    }
+  }
+}

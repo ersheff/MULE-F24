@@ -1,3 +1,9 @@
+import netP5.*;
+import oscP5.*;
+
+OscP5 oscP5;
+NetAddress myRemoteLocation;
+
 ArrayList<Sonar> sonars = new ArrayList<Sonar>();
 ArrayList<Ripple> ripples = new ArrayList<Ripple>();
 
@@ -5,7 +11,9 @@ float rotation = 0;
 
 void setup() {
   // XR display = 4752/1584
-  size(4752/3, 1584/3, P3D);
+  size(4752/4, 1584/4, P3D);
+  oscP5 = new OscP5(this, 8001);
+
   sonars.add(new Sonar(width / 5, height / 5, 60, color(255)));
   sonars.add(new Sonar(width / 5 * 4, height / 5, 60, color(255)));
   sonars.add(new Sonar(width / 2, height / 2, 60, color(255)));
@@ -24,11 +32,11 @@ void draw() {
 
   
   // Apply transformations to skew the plane
-  translate(width / 2, height / 2, 0);
-  rotateX(rotation); // Rotate around X-axis
-  rotation += 0.001;
-  rotateY(rotation*0.1); // Rotate around Y-axis
-  translate(-width / 2, -height / 2, 0);
+  //translate(width / 2, height / 2, 0);
+  //rotateX(rotation); // Rotate around X-axis
+  //rotation += 0.001;
+  //rotateY(rotation*0.1); // Rotate around Y-axis
+  //translate(-width / 2, -height / 2, 0);
   
   // Disable depth testing before drawing transparent objects
   hint(DISABLE_DEPTH_TEST);
@@ -58,6 +66,15 @@ void mousePressed() {
       ripples.add(new Ripple(s.x, s.y, 40, s.c));
     }
   }
+}
+
+void oscEvent(OscMessage message) {
+    if(message.checkTypetag("i")) {
+      int player = message.get(0).intValue();  
+      Sonar s = sonars.get(player);
+      s.pulse();
+      ripples.add(new Ripple(s.x, s.y, 40, s.c));
+    }  
 }
 
 class Ripple {
