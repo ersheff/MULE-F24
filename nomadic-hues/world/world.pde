@@ -11,11 +11,11 @@ OscP5 oscP5;
 Colors colors = new Colors();
 
 // update variables as per world
-int N_PLAYERS = 10;
+int N_PLAYERS = 15;
 int WIDTH = 10;
 int HEIGHT = 10;
 
-float WORLD_SIZE = 960;
+float WORLD_SIZE = 1584/4;
 float CELL_SIZE = WORLD_SIZE / WIDTH;
 
 float worldH = 0;
@@ -32,7 +32,8 @@ PFont _fontLabel;
 TextLabel movementLabel = new TextLabel();
 
 void setup() {
-  size(4752/3, 720, P2D);
+  // XR display = 4752/1584
+  size(4752/4, 1584/4, P2D);
   smooth(8);
   noStroke();
   noCursor();
