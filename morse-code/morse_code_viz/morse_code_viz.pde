@@ -69,13 +69,17 @@ void mousePressed() {
 }
 
 void oscEvent(OscMessage message) {
+  if(message.checkAddrPattern("/pulse") == true) {
     if(message.checkTypetag("i")) {
-      int player = message.get(0).intValue();  
+      int player = message.get(0).intValue();
       Sonar s = sonars.get(player);
       s.pulse();
       ripples.add(new Ripple(s.x, s.y, 40, s.c));
     }  
+  } 
 }
+
+
 
 class Ripple {
   float x, y, r;

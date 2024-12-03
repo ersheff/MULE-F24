@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 567.0, 198.0, 426.0, 450.0 ],
+		"rect" : [ 436.0, 230.0, 461.0, 470.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -69,8 +69,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 285.0, 281.0, 111.0, 22.0 ],
-					"text" : "host 192.168.0.255"
+					"patching_rect" : [ 285.0, 281.0, 98.0, 22.0 ],
+					"text" : "host 192.168.0.4"
 				}
 
 			}
@@ -137,7 +137,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-16",
-					"items" : [ "eric", "SHEFFIEMBA.local", ",", "oscar", "oscar-mba.local", ",", "micah", "LAPTOP-BEFMPJ5E.local", ",", "ethan", "Ethans-MacBook-Pro.local", ",", "ian", "Ians-MBP.local", ",", "mitsi", "LAPTOP-NPLAEJ80.local", ",", "megan", "Megans-MacBook-Pro.local", ",", "aidan", "DESKTOP-JCSG891.local", ",", "alex", "Alex-LapPowerBottom.local", ",", "jackson", "Jacksons-MacBook-Pro-2.local", ",", "nate", "Nathaniels-Air.local", ",", "paul", "LAPTOP-ROO7OHCS.local", ",", "sydney", "SydneysDell.local", ",", "will", "Williams-MBP-2.local", ",", "isa", "Isas-MacBook-Pro.local", ",", "artemis", "Artemis.local" ],
+					"items" : [ "eric", "SHEFFIEMBA.local", ",", "oscar", "oscar-mba.local", ",", "micah", "LAPTOP-BEFMPJ5E.local", ",", "ethan", "Ethans-MacBook-Pro.local", ",", "ian", "Ians-MacBook-Pro.local", ",", "mitsi", "LAPTOP-NPLAEJ80.local", ",", "megan", "Megans-MacBook-Pro.local", ",", "aidan", "DESKTOP-JCSG891.local", ",", "alex", "Alex-LapPowerBottom.local", ",", "jackson", "Jackson-kuhn-mbp.local", ",", "nate", "Nathaniels-Air.local", ",", "paul", "LAPTOP-ROO7OHCS.local", ",", "sydney", "SydneysDell.local", ",", "will", "WilliamPuchot-mbp.local", ",", "isa", "Isas-MacBook-Pro.local", ",", "artemis", "Artemis.local" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
