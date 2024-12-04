@@ -1,27 +1,52 @@
+import spout.*;
+import codeanticode.syphon.*;
+
 import netP5.*;
 import oscP5.*;
 
 OscP5 oscP5;
-NetAddress myRemoteLocation;
+
+Spout spout;
+SyphonServer syphon;
 
 ArrayList<Sonar> sonars = new ArrayList<Sonar>();
 ArrayList<Ripple> ripples = new ArrayList<Ripple>();
 
 float rotation = 0;
 
-void setup() {
-  // XR display = 4752/1584
-  size(4752/4, 1584/4, P3D);
-  oscP5 = new OscP5(this, 8001);
+boolean xr = false;
+int port = 8400;
 
-  sonars.add(new Sonar(width / 5, height / 5, 60, color(255)));
-  sonars.add(new Sonar(width / 5 * 4, height / 5, 60, color(255)));
-  sonars.add(new Sonar(width / 2, height / 2, 60, color(255)));
+int w, h;
+
+void settings() {
+  if (xr) {
+    w = 4752;
+    h = 1584;
+  }
+  else {
+    w = 4752/4;
+    h = 1584/4;
+  }
+  size(w, h, P3D);
+}
+
+void setup() {
+  if (xr) {
+    spout = new Spout(this);
+    spout.setSenderName("morse_code");
+  }
+  else syphon = new SyphonServer(this, "morse_code");
+
+  oscP5 = new OscP5(this, 8400);
+
+  sonars.add(new Sonar(width / 5, height / 5, 60, color(255, 150, 150)));
+  sonars.add(new Sonar(width / 5 * 4, height / 5, 60, color(150, 255, 150)));
+  sonars.add(new Sonar(width / 2, height / 2, 60, color(200, 200, 255)));
   sonars.add(new Sonar(width / 5, height / 5 * 4, 60, color(255)));
   sonars.add(new Sonar(width / 5 * 4, height / 5 * 4, 60, color(255)));
   
   noStroke();
-  // fullScreen(P3D);
 }
 
 void draw() {
@@ -57,6 +82,9 @@ void draw() {
     s.update();
     s.show();
   }
+  
+  if (xr) spout.sendTexture();
+  else syphon.sendScreen();
 }
 
 void mousePressed() {
@@ -78,8 +106,6 @@ void oscEvent(OscMessage message) {
     }  
   } 
 }
-
-
 
 class Ripple {
   float x, y, r;
