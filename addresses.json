@@ -46,6 +46,10 @@
     "hostnames": {
       "server": "oscar-mba.local",
       "visuals": "SHEFFIEMBA.local"
+    },
+    "ips": {
+      "server": "192.168.0.3",
+      "visuals": "10.10.100.27"
     }
   }
 }

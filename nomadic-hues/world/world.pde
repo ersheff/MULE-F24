@@ -15,7 +15,7 @@ int N_PLAYERS = 14;
 int WIDTH = 10;
 int HEIGHT = 10;
 
-float WORLD_SIZE = 1584/4;
+float WORLD_SIZE = 960;
 float CELL_SIZE = WORLD_SIZE / WIDTH;
 
 float worldH = 0;
@@ -33,11 +33,11 @@ TextLabel movementLabel = new TextLabel();
 
 void setup() {
   // XR display = 4752/1584
-  size(4752/4, 1584/4, P2D);
+  // size(1920, 1080, P2D);
   smooth(8);
   noStroke();
   noCursor();
-  // fullScreen(2);
+  fullScreen(2);
   colorMode(HSB, 360, 100, 100, 100);
   frameRate(60);
 
