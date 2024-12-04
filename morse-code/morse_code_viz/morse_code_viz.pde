@@ -38,7 +38,7 @@ void setup() {
     spout = new Spout(this);
     spout.setSenderName("morse_code");
   }
-  else syphon = new SyphonServer(this, "morse_code");
+  // else syphon = new SyphonServer(this, "morse_code");
 
   oscP5 = new OscP5(this, 8400);
 
@@ -136,7 +136,7 @@ void draw() {
   }
   
   if (xr) spout.sendTexture();
-  else syphon.sendScreen();
+  // else syphon.sendScreen();
 }
 
 void mousePressed() {

@@ -38,6 +38,7 @@
   "icarian": {
     "hostnames": {
       "video": "Ians-MBP.local",
+      "video-eric": "SHEFFIEMBA.local",
       "arpeggiator": "Artemis.local",
       "looper": "LAPTOP-NPLAEJ80.local"
     }

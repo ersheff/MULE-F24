@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 285.0, 62.0, 603.0, 762.0 ],
+		"rect" : [ 285.0, 62.0, 1036.0, 762.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -151,12 +151,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 1555.5, 242.0, 145.0, 22.0 ],
+					"patching_rect" : [ 1555.5, 242.0, 168.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"legacy" : 0
 					}
 ,
-					"text" : "dict.unpack video: looper:"
+					"text" : "dict.unpack video-eric: looper:"
 				}
 
 			}
