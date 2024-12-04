@@ -92,13 +92,13 @@ $(function () {
     });
 
     $('#playerSelector').on('change', function () {
-        thisPlayer = $(this).val();
+        thisPlayer = parseInt($(this).val());
     });
 
     $('#susToggle').on('change', function() {
         let sus = $(this).prop('checked');
         morsePlayer.sustain = sus;
-    })
+    });
 
     $('#verbToggle').on('change', function() {
         morsePlayer.toggleVerb();
